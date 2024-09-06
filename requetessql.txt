@@ -1,0 +1,5 @@
+requete pour selectionner toutes les matieres suivies par un etudiant:
+SELECT libelle_matiere from etudiants e INNER JOIN etudiant_suivre_matiere esm on e.id_etudiant = esm.id_etudiant INNER join matiere m ON esm.id_matiere = m.id_matiere WHERE e.id_etudiant = 1;
+
+requete pour selectionner tous les etudiants qui suivent une matiere:
+SELECT nomEtudiant from etudiants e INNER JOIN etudiant_suivre_matiere esm on e.id_etudiant = esm.id_etudiant INNER join matiere m ON esm.id_matiere = m.id_matiere WHERE m.id_matiere = 1;
